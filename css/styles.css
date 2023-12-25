@@ -942,7 +942,7 @@ img {
 }
 
 .form-mail:focus {
-border-color:  rgba(255, 255, 255, 0.30);
+    border-color: rgba(255, 255, 255, 0.30);
 }
 
 .footer-form-btn {
@@ -962,6 +962,7 @@ border-color:  rgba(255, 255, 255, 0.30);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     transition: background-color 250ms var(--timing-function)
 }
+
 .footer-form-btn:hover,
 .footer-form-btn:focus {
     background-color: var(--accent-cl);
@@ -1044,8 +1045,8 @@ border-color:  rgba(255, 255, 255, 0.30);
     height: 30px;
     border-radius: 50%;
     border-color: transparent;
+    background-color: transparent;
     stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
     transition: fill 250ms var(--timing-function);
 }
 
@@ -1059,10 +1060,6 @@ border-color:  rgba(255, 255, 255, 0.30);
     display: block;
     margin: 0;
     padding: 0;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .form-modal-label {
@@ -1092,7 +1089,10 @@ border-color:  rgba(255, 255, 255, 0.30);
     margin-top: 4px;
     transition: border-color 250ms var(--timing-function);
 }
-
+.form-modal-label:hover,
+.form-modal-label:focus {
+    fill: var(--accent-cl);
+}
 .form-modal-input:hover,
 .form-modal-input:focus {
     border-color: var(--accent-cl);
@@ -1116,11 +1116,6 @@ border-color:  rgba(255, 255, 255, 0.30);
     transition: fill 250ms var(--timing-function);
 }
 
-.form-modal-icon:hover,
-.form-modal-icon:focus {
-    fill: var(--accent-cl);
-}
-
 /* form-modal-textarea */
 
 .form-modal-textarea {
@@ -1137,7 +1132,7 @@ border-color:  rgba(255, 255, 255, 0.30);
     resize: none;
 }
 
-/*  Умови договору */
+/*  Умови договору   checkbox */
 .policy-group {
     display: flex;
     align-items: center;
@@ -1156,11 +1151,18 @@ border-color:  rgba(255, 255, 255, 0.30);
     outline: 2px solid var(--secondary-txt-cl);
     outline-offset: -2px;
     transition: background-color 250ms var(--timing-function);
+    transition: fill 250ms var(--timing-function);
+    transition: outline 250ms var(--timing-function);
+}
+.checkbox:checked+.custon-checkbox:hover,
+.checkbox:checked+.custon-checkbox:focus {
+    border-color: var(--accent-cl);
 }
 
 .checkbox:checked+.custon-checkbox {
     background-color: var(--accent-cl);
     fill: #ffffff;
+    outline: var(--accent-cl);
 }
 
 .custon-checkbox-icon {
@@ -1191,6 +1193,8 @@ border-color:  rgba(255, 255, 255, 0.30);
     letter-spacing: 0.42px;
     text-decoration-line: underline;
 }
+
+/*  form-modal-btn  */
 
 .form-modal-btn {
     display: block;

@@ -107,7 +107,7 @@
                   </svg>
                   <input
                     class="form-modal-input"
-                    type="tel"
+                    type="text"
                     name="tel"
                     id="tel"
                   />
@@ -117,7 +117,7 @@
                   <span class="form-modal-desk">Пошта</span>
                   <input
                     class="form-modal-input"
-                    type="mail"
+                    type="text"
                     name="mail"
                     id="mail"
                   />
@@ -640,29 +640,27 @@
           </ul>
         </div>
         <!-- Футер форма  e-mail input -->
-        <div class="mail-input">
-          <h2 class="mail-input-title">Підпишіться на розсилку</h2>
-          <form class="contact-form" name="contact-form">
-            <label class="form-grup">
+
+        <form class="contact-form" name="contact-form">
+          <div class="mail-input">
+            <p class="mail-input-title">Підпишіться на розсилку</p>
+            <label class="form-grup" for="footer-mail">
               <input
                 class="form-mail"
                 type="text"
-                name="mail"
+                name="footer-mail"
+                id="footer-mail"
                 placeholder="E-mail"
               />
-
-              <button class="footer-form-btn" type="submit">
-                <span class="btn-desk">Підписатися</span><svg
-                  class="footer-form-btn-icon"
-                  width="24"
-                  height="24"
-                >
-                  <use href="./images/sprite.svg#icon-telegram"></use>
-                </svg>
-              </button>
             </label>
-          </form>
-        </div>
+          </div>
+          <button class="footer-form-btn" type="submit">
+            <span class="btn-desk">Підписатися</span
+            ><svg class="footer-form-btn-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>

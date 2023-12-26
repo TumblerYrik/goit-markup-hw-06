@@ -906,14 +906,25 @@ img {
 
 /*   Футер форма  e-mail input*/
 
-.mail-input {
-    width: 570px;
-    height: 86px;
-    flex-shrink: 0;
+.contact-form {
+display: flex;
+align-items: flex-end;
+width: 570px;
+height: 86px;
+margin: 0;
+padding: 0;
 }
+.mail-input {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
 
 .form-grup {
     display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
@@ -985,8 +996,6 @@ img {
 
 .footer-form-btn-icon {
     display: inline-flex;
-
-
 }
 
 /* ==========================
@@ -1044,9 +1053,10 @@ img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border-color: transparent;
+    border-color: rgba(0, 0, 0, 0.10);;
     background-color: transparent;
     stroke-width: 1px;
+
     transition: fill 250ms var(--timing-function);
 }
 

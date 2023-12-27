@@ -28,24 +28,28 @@
             class="link logo"
             href="./index.html"
             aria-label="site-logo-WebStudio"
-            >Web<span class="logo-part">Studio</span></a
+            >Web<span class="logo__part">Studio</span></a
           >
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="link nav-title current" href="#studio">Студія</a>
+          <ul class="navigation__list list">
+            <li class="navigation__item">
+              <a class="link navigation__title current" href="#studio"
+                >Студія</a
+              >
             </li>
-            <li class="navigation-item">
-              <a class="link nav-link" href="./portfolio.html">Портфоліо</a>
+            <li class="navigation__item">
+              <a class="link navigation__link" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
-            <li class="navigation-item">
-              <a class="link nav-link" href="#contacts">Контакти</a>
+            <li class="navigation__item">
+              <a class="link navigation__link" href="#contacts">Контакти</a>
             </li>
           </ul>
         </nav>
         <ul class="header-grup">
-          <li class="header-grup-item">
+          <li class="header-grup__item">
             <a
-              class="link header-mailto mail studio-link"
+              class="link header-grup__mailto mail studio-link"
               href="mailto:info@devstudio.com"
             >
               <svg class="studio-icon" width="16" height="12">
@@ -53,9 +57,9 @@
               >info@devstudio.com
             </a>
           </li>
-          <li class="header-grup-item">
+          <li class="header-grup__item">
             <a
-              class="link header-phone text studio-link"
+              class="link header-grup__phone text studio-link"
               href="tel:+380961111111"
             >
               <svg class="studio-icon" width="10" height="16">
@@ -69,93 +73,93 @@
     <main class="main">
       <!-- section Hero -->
       <section class="hero section overlay">
-        <div class="container hero-container">
-          <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
+        <div class="container hero__container">
+          <h1 class="hero__name">Ефективні рішення для вашого бізнесу</h1>
           <button class="btn" type="button" data-modal-open>
             Замовити послугу
           </button>
           <!-- Модальне вікно  -->
           <div class="backdrop is-hidden" data-modal>
-            <div class="modal-wrapper">
-              <button class="modal-btn" data-modal-close>
-                <svg class="modal-icon" width="30" height="30">
+            <div class="modal__wrapper">
+              <button class="modal__btn-close" data-modal-close>
+                <svg class="modal__icon-close" width="30" height="30">
                   <use href="./images/sprite.svg#icon-image"></use>
                 </svg>
               </button>
-              <!-- Модальне вікно modal-form -->
-              <form class="modal-form" autocomplete="off">
-                <b class="form-title">Залиште свої дані, ми вам передзвонимо</b>
-                <label class="form-modal-label" for="name">
-                  <span class="form-modal-desk">Ім'я</span>
+              <!-- Форма  Модальне вікно modal-form -->
+              <form class="modal" autocomplete="off">
+                <b class="modal__title">Залиште свої дані, ми вам передзвонимо</b>
+                <label class="modal__label-contact" for="name">
+                  <span class="modal__desk-contact">Ім'я</span>
                   <input
-                    class="form-modal-input"
+                    class="modal__input-contact"
                     type="text"
                     name="user-name"
                     id="name"
                   />
-                  <svg class="form-modal-icon" width="18" height="18">
+                  <svg class="modal__icon-contact" width="18" height="18">
                     <use
                       href="./images/sprite.svg#icon-person-black-18dp-1-1"
                     ></use>
                   </svg>
                 </label>
 
-                <label class="form-modal-label" for="tel">
-                  <span class="form-modal-desk">Телефон</span>
-                  <svg class="form-modal-icon" width="18" height="18">
-                    <use href="./images/sprite.svg#icon---18dp-1-1"></use>
-                  </svg>
+                <label class="modal__label-contact" for="tel">
+                  <span class="modal__desk-contact">Телефон</span>
                   <input
-                    class="form-modal-input"
+                    class="modal__input-contact"
                     type="text"
                     name="tel"
                     id="tel"
                   />
+                  <svg class="modal__icon-contact" width="18" height="18">
+                    <use href="./images/sprite.svg#icon---18dp-1-1"></use>
+                  </svg>
                 </label>
 
-                <label class="form-modal-label" for="mail">
-                  <span class="form-modal-desk">Пошта</span>
+                <label class="modal__label-contact" for="mail">
+                  <span class="modal__desk-contact">Пошта</span>
                   <input
-                    class="form-modal-input"
+                    class="modal__input-contact"
                     type="text"
                     name="mail"
                     id="mail"
                   />
-                  <svg class="form-modal-icon" width="18" height="18">
+                  <svg class="modal__icon-contact" width="18" height="18">
                     <use
                       href="./images/sprite.svg#icon-email-black-18dp-1-1"
                     ></use>
                   </svg>
                 </label>
 
-                <label class="form-modal-label">
-                  <span class="form-modal-desk">Коментар</span>
+                <label class="modal__label-contact">
+                  <span class="modal__desk-contact">Коментар</span>
                   <textarea
-                    class="form-modal-textarea"
+                    class="modal__textarea-contact"
                     name="comment"
                     rows="10"
                     placeholder="Введіть текст"
                   ></textarea>
                 </label>
 
-                <label class="policy-group">
+                <label class="modal__policy-group">
                   <input
-                    class="checkbox visually-hidden"
+                    class="modal__checkbox visually-hidden"
                     type="checkbox"
                     name="checkbox"
                   />
-                  <span class="custon-checkbox">
-                    <svg class="custon-checkbox-icon" width="16" height="15">
+                  <span class="modal__custon-checkbox">
+                    <svg class="modal__icon-checkbox" width="16" height="15">
                       <use href="./images/sprite.svg#icon-check-solid-1"></use>
                     </svg>
                   </span>
-                  <b class="form-policy-desk">
-                    Погоджуюся з розсилкою та приймаю<span class="span-desk"
+                  <b class="modal__desk-checkbox">
+                    Погоджуюся з розсилкою та приймаю<span class="modal__span-desk"
                       >Умови договору</span
                     ></b
                   >
                 </label>
-                <button class="form-modal-btn" type="submit">Відправити</button>
+                <button class="modal__btn-send" type="submit">Відправити</button>
               </form>
             </div>
           </div>
@@ -644,7 +648,6 @@
         <form class="contact-form" name="contact-form">
           <div class="mail-input">
             <p class="mail-input-title">Підпишіться на розсилку</p>
-            <label class="form-grup" for="footer-mail">
               <input
                 class="form-mail"
                 type="text"
@@ -652,7 +655,6 @@
                 id="footer-mail"
                 placeholder="E-mail"
               />
-            </label>
           </div>
           <button class="footer-form-btn" type="submit">
             <span class="btn-desk">Підписатися</span

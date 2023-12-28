@@ -21,7 +21,7 @@
   <body>
     <!-- header section -->
     <header class="header">
-      <div class="container heder-container">
+      <div class="container heder__container">
         <nav class="navigation">
           <a
             class="link logo"
@@ -322,24 +322,24 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <div class="footer-container container">
-        <div class="footer-desc">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
           <a
-            class="link footer-logo"
+            class="link footer__logo"
             href="./index.html"
             aria-label="site-logo-WebStudio"
-            >Web<span class="footer-logo-part">Studio</span></a
+            >Web<span class="footer__logo-part">Studio</span></a
           >
           <address class="address">
-            <p class="address-desc">м. Київ, пр-т Лесі Українки, 26</p>
-            <ul class="footer-list">
-              <li class="footer-item">
-                <a class="footer-link" href="mailto:info@devstudio.com"
+            <p class="address__desc">м. Київ, пр-т Лесі Українки, 26</p>
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="footer-item">
-                <a class="footer-link" href="tel:+380961111111"
+              <li class="address__item">
+                <a class="address__link" href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -401,20 +401,20 @@
           </ul>
         </div>
         <!-- Футер форма  e-mail input -->
-        <form class="contact-form" name="contact-form">
-          <div class="mail-input">
-            <p class="mail-input-title">Підпишіться на розсилку</p>
+        <form class="form" name="contact-form">
+          <div class="form__mail">
+            <label class="form__label" for="mail">Підпишіться на розсилку</label>
               <input
-                class="form-mail"
+                class="form__input"
                 type="text"
                 name="footer-mail"
                 id="footer-mail"
                 placeholder="E-mail"
               />
           </div>
-          <button class="footer-form-btn" type="submit">
-            <span class="btn-desk">Підписатися</span
-            ><svg class="footer-form-btn-icon" width="24" height="24">
+          <button class="form__btn" type="submit">
+            <span class="form__btn-desk">Підписатися</span
+            ><svg class="form__btn-icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-telegram"></use>
             </svg>
           </button>

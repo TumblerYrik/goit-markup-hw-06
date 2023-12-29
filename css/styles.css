@@ -339,6 +339,12 @@ img {
     z-index: 3;
 }
 
+/* Початковий стан елементу перед анімаціей */
+
+.backdrop.is-hidden .modal__wrapper {
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
 }
@@ -349,9 +355,6 @@ img {
     pointer-events: none;
 }
 
-.backdrop.is-hidden .modal__wrapper {
-    transform: translate(-50%, -50%) scale(0.4);
-}
 
 .modal__wrapper {
     padding: 40px;
@@ -368,7 +371,7 @@ img {
     z-index: 4;
 }
 
-.modal__btn-close {
+.modal-btn--close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -382,27 +385,34 @@ img {
     background-color: transparent;
     stroke-width: 1px;
     transition: fill 250ms var(--timing-function);
+    transition: border-color 250ms var(--timing-function);
 }
 
-.modal__btn-close:hover,
-.modal__btn-close:focus {
+.modal-btn--close:hover,
+.modal-btn--close:focus {
     fill: var(--accent-cl);
 }
 
+.modal__icon-close {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
 /* modal form */
-.modal {
+.modal-form {
     display: block;
     margin: 0;
     padding: 0;
 }
 
-.modal__label {
+.modal-form__label {
     position: relative;
     display: block;
     margin-bottom: 10px;
 }
 
-.modal__title {
+.modal-form__title {
     display: block;
     width: 448px;
     color: var(--secondary-txt-cl);
@@ -414,7 +424,7 @@ img {
     margin-bottom: 12px;
 }
 
-.modal__input {
+.modal-form__input {
     margin: 0;
     padding: 10px 40px;
     border-radius: 4px;
@@ -424,11 +434,16 @@ img {
     transition: border-color 250ms var(--timing-function);
 }
 
-.modal__input:focus~.modal__icon {
+.modal-form__input:focus {
+    border-color: var(--accent-cl);
+    outline: none;
+}
+
+.modal-form__input:focus~.modal-form__icon {
     fill: var(--accent-cl);
 }
 
-.modal__desk {
+.modal-form__desk {
     display: block;
     color: var(--main-txt-cl);
     font-family: var(--main-font);
@@ -437,7 +452,7 @@ img {
     letter-spacing: 0.12px;
 }
 
-.modal__icon {
+.modal-form__icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -448,9 +463,10 @@ img {
 
 /* form-modal-textarea */
 
-.modal__textarea {
+.modal-form__textarea {
     width: 100%;
     padding: 12px 16px;
+    margin-top: 4px;
     color: rgba(117, 117, 117, 0.50);
     font-family: var(--main-font);
     font-size: 12px;
@@ -460,19 +476,26 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.20);
     background-color: transparent;
     resize: none;
+    transition: border-color 250ms var(--timing-function);
+}
+
+.modal-form__textarea:focus {
+    border-color: var(--accent-cl);
+    outline: none;
 }
 
 /*  Умови договору   checkbox */
-.modal__policy-group {
+.modal-form__policy-group {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.modal__custon-checkbox {
+.modal-form__custon-checkbox {
     width: 16px;
     height: 15px;
+    margin-top: 20px;
     margin-right: 10px;
     display: flex;
     align-items: center;
@@ -486,27 +509,28 @@ img {
 }
 
 
-.modal__checkbox:checked+.modal__custon-checkbox {
+.modal-form__checkbox:checked+.modal-form__custon-checkbox {
     background-color: var(--accent-cl);
     fill: #ffffff;
     outline: var(--accent-cl);
 }
 
-.modal__checkbox:focus~.modal__custon-checkbox {
+.modal-form__checkbox:focus~.modal-form__custon-checkbox {
     outline: 2px solid var(--accent-cl);
     outline-offset: -2px;
 }
 
-.modal__icon-checkbox {
+.modal-form__icon-checkbox {
     opacity: 0;
     transition: opacity 250ms var(--timing-function);
 }
 
-.modal__checkbox:checked+.modal__custon-checkbox .modal__icon-checkbox {
+.modal-form__checkbox:checked+.modal-form__custon-checkbox .modal-form__icon-checkbox {
     opacity: 1;
 }
 
-.modal__desk-checkbox {
+.modal-form__desk-checkbox {
+    margin-top: 20px;
     color: var(--main-txt-cl);
     font-family: var(--main-font);
     font-size: 14px;
@@ -515,7 +539,7 @@ img {
     letter-spacing: 0.42px;
 }
 
-.modal__span-desk {
+.modal-form__span-desk {
     padding-left: 4px;
     color: var(--accent-cl);
     font-family: var(--main-font);
@@ -528,7 +552,7 @@ img {
 
 /*  form-modal-btn  */
 
-.modal__btn-send {
+.modal-form__btn--send {
     display: block;
     min-width: 152px;
     min-height: 30px;
@@ -556,8 +580,8 @@ img {
     border: transparent;
 }
 
-.modal__btn-send:hover,
-.modal__btn-send:focus {
+.modal-form__btn--send:hover,
+.modal-form__btn--send:focus {
     background-color: #188CE8;
 }
 

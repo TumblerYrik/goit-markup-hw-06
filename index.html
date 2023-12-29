@@ -18,6 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- header section -->
@@ -89,7 +90,7 @@
               <!-- Форма  Модальне вікно modal-form -->
               <form class="modal-form" autocomplete="off">
                 <b class="modal-form__title">Залиште свої дані, ми вам передзвонимо</b>
-                <label class="modal-form__label" for="name">
+                <label class="modal-form__label" for="user-name">
                   <span class="modal-form__desk">Ім'я</span>
                   <input
                     class="modal-form__input"
@@ -117,11 +118,11 @@
                   </svg>
                 </label>
 
-                <label class="modal-form__label" for="mail">
+                <label class="modal-form__label">
                   <span class="modal-form__desk">Пошта</span>
                   <input
                     class="modal-form__input"
-                    type="text"
+                    type="email"
                     name="mail"
                     id="mail"
                   />
@@ -132,7 +133,7 @@
                   </svg>
                 </label>
 
-                <label class="modal-form__label">
+                <label class="modal-form__label"> 
                   <span class="modal-form__desk">Коментар</span>
                   <textarea
                     class="modal-form__textarea"
@@ -647,7 +648,7 @@
 
         <form class="form" name="form">
           <div class="form__mail">
-            <label class="form__label" for="mail">Підпишіться на розсилку</label>
+            <label class="form__label" for="footer-mail">Підпишіться на розсилку</label>
               <input
                 class="form__input"
                 type="text"
